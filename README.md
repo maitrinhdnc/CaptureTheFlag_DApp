@@ -1,9 +1,9 @@
-1. I build DApp using Hardhat is a js package so I need to `npm init --y`
+1. I build DApp using Hardhat (a js package) so I need to `npm init --y`
 2. Install hardhat library: `npm install --save-dev hardhat`
 3. Create hardhat project: `npx hardhat`
 4. Writing smart contract 
 5. Compile contract: `npx hardhat compile`
-6. Install library: `npm install @nomicfoundation/hardhat-toolbox`
+6. Install library: `npm install @nomicfoundation/hardhat-toolbox` for deploy
 7. Create secrets.json for metamask account 
 8. 
 ___
