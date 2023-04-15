@@ -1,7 +1,8 @@
 1. I build DApp using Hardhat (a js package) so I need to `npm init --y`
 2. Install hardhat library: `npm install --save-dev hardhat`
 3. Create hardhat project: `npx hardhat`
-4. Writing smart contract 
+4. Writing smart contract - 
+Can test on Remix Ethe IDE: https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js
 5. Compile contract: `npx hardhat compile`
 6. Install library: `npm install @nomicfoundation/hardhat-toolbox` for deploy
 7. Create secrets.json for metamask account 
