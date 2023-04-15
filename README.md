@@ -5,13 +5,7 @@
 5. Compile contract: `npx hardhat compile`
 6. Install library: `npm install @nomicfoundation/hardhat-toolbox`
 7. Create secrets.json for metamask account 
-8. 
-___
-### Enviroment Params
-Prepare the following params in `.env`:
-* `ADMIN_KEY`: private key of an account with testnet ether. Use this account to deploy `Counter` and interact with `RelayHub` (deposit for `PayMaster`).
-* `ETHERSCAN_TOKEN`: required if you want to deploy and verify your own `Counter`.
-* `INFURA_URL`: create a free Infura account and get a testnet URL.
+8. I use OpengGSN version stable 2.2.5: https://docs-v2.opengsn.org/networks/addresses.html
 ___
 ### Deploy Counter
 Deploy and verify the contract. This step has been donw with Binance chain test network so you may reuse the contracts. If you choose to deploy your own contract, you need to setup the network in [hardhat.config.js](./hardhat.config.js), and then setup the deployed address in [address.js](./scripts/address.js).
