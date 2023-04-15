@@ -1,22 +1,30 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: GPL-3.0
+
 pragma solidity ^0.8.9;
 
-// Uncomment this line to use console.log
-// import "hardhat/console.sol";
+import "@opengsn/contracts/src/BaseRelayRecipient.sol";
 
-contract CaptureTheFlag {
 
-    address public currentHolder = address(0);
+contract CaptureTheFlag is BaseRelayRecipient  {
+    
+    constructor(address forwarder) {
+        _setTrustedForwarder(forwarder);
+    }
 
     event FlagedCapture(address previousHolder, address currentHolder);
 
-    function captureTheFlag() external{
+    address public currentHolder = address(0);
+
+    function captureTheFlag() external {
         address previousHolder = currentHolder;
 
-        currentHolder = msg.sender;
-        
+        currentHolder = _msgSender();
+
         emit FlagedCapture(previousHolder, currentHolder);
     }
-
-
+    
+    function versionRecipient() external pure override returns (string memory) {
+        return "2.2.5";
+    }
 }
+

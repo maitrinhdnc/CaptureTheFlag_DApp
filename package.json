@@ -13,6 +13,9 @@
     "hardhat": "^2.13.1"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "@opengsn/contracts": "2.2.5",
+    "@opengsn/provider": "2.2.5"
   }
 }

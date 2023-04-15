@@ -1,19 +1,17 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
 const hre = require("hardhat");
-// Address without gasless: "0x6cc4082870a75265Ff6326cF5209A5aDbe56e280"
+// Address with gasless accept all: "0xC3349d88A8113bCa49CeC89D558AA66C90e34D12"
+
 async function main() {
   const CaptureFlag = await hre.ethers.getContractFactory("CaptureTheFlag");
-  const captureFlag = await CaptureFlag.deploy();
+
+  const forwarder = '0xeB230bF62267E94e657b5cbE74bdcea78EB3a5AB'
+  
+  const captureFlag = await CaptureFlag.deploy(forwarder);
 
   await captureFlag.deployed();
 
   console.log(
-    `CaptureFlag deployed to ${captureFlag.address}`
+    `CaptureTheFlag with gasless deployed to ${captureFlag.address}`
   );
 }
 

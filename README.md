@@ -19,3 +19,34 @@ Deploy and verify the contract. This step has been donw with Binance chain test 
 ```bash
 npx hardhat run scripts/deploy.js --network testnet
 ```
+___
+### Test
+The test simple creates a new gasless user on the fly, and use the gasless user to increment the counter.
+
+```bash
+npx hardhat test --network testnet
+```
+
+Results:
+```bash
+  Test 
+    ✔ Compare init address with init current holder (280ms)
+    ✔ Capture Flag from gasless user (36989ms)
+
+
+  2 passing (41s)
+```
+___
+If got some errors:
+1.   Error: Not a paymaster contract: CONNECTION ERROR: Couldn't connect to node https://endpoints.omniatech.io/v1/bsc/testnet/public.
+2.  Error: Failed to relay call. Results:
+Relaying errors (1):
+https://gr.uprotel.com/gsn1 => CONNECTION ERROR: Couldn't connect to node https://endpoints.omniatech.io/v1/bsc/testnet/public.
+3. Error: Timeout of 40000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\trinh.mai_ecotruck\Desktop\hardhat\CaptureTheFlag_DApp\test\CaptureFlagTest.js)
+
+
+```bash
+npx hardhat run scripts/deploy.js --network testnet
+Get new contract address and add to file need address of smartcontract (test)
+npx hardhat test --network testnet
+```

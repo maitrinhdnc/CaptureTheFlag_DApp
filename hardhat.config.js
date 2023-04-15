@@ -1,8 +1,6 @@
-require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-waffle");
 
-/** @type import('hardhat/config').HardhatUserConfig */
 const {mnemonic} = require("./secrets.json")
-
 
 module.exports = {
   solidity: "0.8.18",
