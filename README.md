@@ -7,12 +7,6 @@
 7. Create secrets.json for metamask account 
 8. 
 ___
-### Enviroment Params
-Prepare the following params in `.env`:
-* `ADMIN_KEY`: private key of an account with testnet ether. Use this account to deploy `Counter` and interact with `RelayHub` (deposit for `PayMaster`).
-* `ETHERSCAN_TOKEN`: required if you want to deploy and verify your own `Counter`.
-* `INFURA_URL`: create a free Infura account and get a testnet URL.
-___
 ### Deploy Counter
 Deploy and verify the contract. This step has been donw with Binance chain test network so you may reuse the contracts. If you choose to deploy your own contract, you need to setup the network in [hardhat.config.js](./hardhat.config.js), and then setup the deployed address in [address.js](./scripts/address.js).
 
